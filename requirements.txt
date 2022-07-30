@@ -1,0 +1,2 @@
+필요 라이브러리
+- sqlite3 (ver 2.6.0), datetime
