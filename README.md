@@ -8,3 +8,5 @@ deepface모델을 pre-trained된 weights를 사용해서 face recognition을 진
 ## 2. 현재 얼굴을 인식하면 "detected:  kdg1 ( 0.68989563 )" 이라고 출력됨. 
 -> file명을 학번으로 해서 name, ID를 matching해서 return할 수 있도록 해야함. distance threshold가 <= 0.7로 default setting. 변경 
  
+## 3. image path를 database로 해놨습니다. 파일 안에 이미지 이름을 "학번_"으로 설정하면 됩니다.
+-> returnID()함수로 이름을 str type으로 반환해줍니다.
