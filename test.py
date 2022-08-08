@@ -1,18 +1,20 @@
-from datetime import datetime
+import datetime as dt
+x = dt.datetime.now()
 
-now = datetime.now()
+print(x.date(),type(x.date()))
+date = str(x.date())
+print(date,type(date))
 
-print("현재 : ", now)
-print("현재 날짜 : ", now.date())
-print("현재 시간 : ", now.time())
-print("timestamp : ", now.timestamp())
-print("년 : ", now.year)
-print("월 : ", now.month)
-print("일 : ", now.day)
-print("시 : ", now.hour)
-print("분 : ", now.minute)
-print("초 : ", now.second)
-print("마이크로초 : ", now.microsecond)
-print("요일 : ", now.weekday())
-print("문자열 변환 : ", now.strftime('%Y-%m-%d %H:%M:%S'))
-print(type(now))
+
+class attendance_check:
+    def __init__(self, user, password):
+        self.conn = pymysql.connect(host='127.0.0.1', user=user, password=password, db=DB, charset='utf8')
+        self.cur = self.conn.cursor()
+        print('connect')
+    def check(self):
+        con = sqlite3.connect('../DB/student.db')
+        cursor = con.cursor()
+        cursor.execute("SELECT * FROM student WHERE id = %d", self.id)
+        self.id = cursor.fetchone()
+
+

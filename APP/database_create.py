@@ -1,17 +1,16 @@
 import sqlite3
-from datetime import datetime
 
-def create_db():
-    cursor.execute("""CREATE TABLE student(id integer PRIMARY KEY,
-    name VARCHAR(50), date DATE, time TIME, attendance integer)""")
+class database:
+    def create_db(count):
+        cursor.execute("""CREATE TABLE %s(id integer PRIMARY KEY,
+        name VARCHAR(50),attendance integer)""", "student"+str(count))
 
-def insert_db():
-    cursor.execute()
+    def insert_db(id, name):
+        cursor.execute()
 
 
 con = sqlite3.connect('../DB/student.db')
 cursor = con.cursor()
-now = datetime()
 
 
 
