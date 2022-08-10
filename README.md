@@ -25,3 +25,30 @@ sqlite3/mongoDB 이용한 DB생성
 - 모델이 local에서 돌아가는게 빡빡해서 colab으로 이용
 - 모델이랑 db 생성은 되는듯
 - 
+~~~ py
+# colab
+import sqlite3
+
+# DB 생성, 오토 커밋
+conn = sqlite3.connect('student.db')
+
+# 커서 획득
+cursor = conn.cursor()
+
+# Creating database tables
+cursor.execute("CREATE TABLE Student_Attendance (id integer PRIMARY KEY, attendance text)")
+
+# 모델 들어갈 자리
+# 모델에서 학번 반환하고 pandas dataframe 만들기
+
+for index, instance in tqdm(df.iterrows(), total=df.shape[0]):
+    # df = 모델에서 반환한 ID 값을 저장한 데이터프레임
+    #img_name = instance['img_name']
+    ID = instance['ID'] # 학번만 반환한다면 이거만 쓰면 됨
+
+    insert_statement = 'INSERT INTO Student_Attendance (ID) VALUES (?)'
+    insert_args = (index, ID)
+    cursor.execute(insert_statement, insert_args)
+
+conn.commit()
+~~~
