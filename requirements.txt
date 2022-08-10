@@ -1,2 +1,4 @@
 필요 라이브러리
-- sqlite3 (ver 2.6.0), datetime
+- database: pymysql, datetime
+- deepface: numpy, opencv-python, keras, tensorflow, pillow, matplotlib
+- deepface_weights: https://github.com/swghosh/DeepFace/releasesq
