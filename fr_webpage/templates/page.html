@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        table {
+            width: 100%;
+            border-top: 1px solid #444444;
+            border-collapse: collapse;
+        }
+        th, td {
+            border-bottom: 1px solid #444444;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #bbdefb;
+        }
+        td {
+            background-color: #e3f2fd;
+        }
+</style>
+</head>
+ 
+<body>
+    <p>
+        <h1> Hello {{ user_id }} ! </h1>
+    </p>
+
+    <table class="table">
+        <tr>
+            <th>주차</th>
+            <th>날짜</th>
+            <th>출첵여부</th>
+        </tr>
+        {% for obj in data_list%}
+        <tbody>
+            <tr>
+                <td>{{obj.week}}</td>
+                <td>{{obj.date_check}}</td>
+                <td>{{obj.check_check}}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</body>
+ 
+</html>

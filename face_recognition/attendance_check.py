@@ -14,3 +14,5 @@ def check(id):
     res = db.cur.fetchall()
     print(res)
 
+check(18011787)
+

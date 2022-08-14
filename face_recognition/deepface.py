@@ -114,6 +114,7 @@ def findEuclideanDistance(source_representation, test_representation):
 
 #학번 반환하는 함수
 def returnId(id) :
+    print(id)
     attendance_check.check(id)
 
 # ------------------------
@@ -187,7 +188,7 @@ while (True):
 
                         break
 
-                index = index + 1
+               q index = index + 1
 
             if is_found:
 
