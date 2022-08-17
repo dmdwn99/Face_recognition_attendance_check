@@ -10,3 +10,6 @@
 2. Deepface 모델에서 얼굴 인식하여 db 값 변경하였을 때 웹사이트에서 db 변경 확인
 3. 얼굴 밝기의 따라 바운딩 박스 생성 확률의 차이가 있음, database img를 변경하니 얼굴 인식 됨
 4. 모델 개선 및 웹페이지 기능 추가 및 개선 필요
+
+## 2022-08-17
+1. mysql table 중에서 user_check의 date_time column의 자료형을 str로 설정해줘야 함
