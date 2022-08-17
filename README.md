@@ -13,3 +13,5 @@
 
 ## 2022-08-17
 1. mysql table 중에서 user_check의 date_check column의 자료형을 str로 설정해줘야 함
+2. fr_webpage/db_model/mysql.py 파일의 user, passwd, db를 local mysql의 id, pw, db_name로 변경해야함
+3. face_recognition/attendance_check.py 파일 5번째 줄 database.database()의 파라미터를 local mysql의 id, pw, db_name로 
