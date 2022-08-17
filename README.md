@@ -12,4 +12,4 @@
 4. 모델 개선 및 웹페이지 기능 추가 및 개선 필요
 
 ## 2022-08-17
-1. mysql table 중에서 user_check의 date_time column의 자료형을 str로 설정해줘야 함
+1. mysql table 중에서 user_check의 date_check column의 자료형을 str로 설정해줘야 함
